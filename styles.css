@@ -701,6 +701,15 @@ footer img:active{
   display: inline-block;
 }
 
+.javascript::before{
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: rgb(241 224 90);
+  border-radius: 50%;
+  display: inline-block;
+}
+
 .kotlin::before{
   content: "";
   height: 12px;
