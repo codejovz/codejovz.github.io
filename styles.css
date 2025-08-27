@@ -705,7 +705,7 @@ footer img:active{
   content: "";
   width: 12px;
   height: 12px;
-  background-color: rgb(241 224 90);
+  background-color: rgb(241, 224, 90);
   border-radius: 50%;
   display: inline-block;
 }
