@@ -1,5 +1,3 @@
-import React from 'react'
-import { useEffect } from 'react';
 import  Menu from './Menu.tsx';
 import './App.css'
 
