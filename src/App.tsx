@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import  Menu from './Menu.tsx';
 import './App.css'
 
@@ -5,9 +6,10 @@ function App()  {
 
   return (
     <>
-            <header>@codejovz</header>
+            <Analytics />
             <Menu />
-
+            <header>@codejovz</header>
+            
             <div className="container">
 
                 <article id="rojo" className="box"> {/*I've named these after color names to make editing more intuitive*/}
