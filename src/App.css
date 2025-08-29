@@ -500,11 +500,11 @@ line{
 }
 
 #mailImg {
-  content: url('./mail-svgrepo-com.svg');
+  content: url('/mail-svgrepo-com.svg');
 }
 
 #mailImg:hover {
-  content: url('public/mail-open-svgrepo-com.svg');
+  content: url('/mail-open-svgrepo-com.svg');
 }
 
 .card:hover .footer {
