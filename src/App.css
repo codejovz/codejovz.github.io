@@ -211,7 +211,7 @@ img, video, svg { height: auto; max-width: 100%; }
 
   #menuLin::before {
     content: '';
-    background-image: url(Assets/linkedin.svg);
+    background-image: url(./linkedin.svg);
     background-size: contain;
     width: 16px;
     height: 16px;
@@ -223,7 +223,7 @@ img, video, svg { height: auto; max-width: 100%; }
 
 #menuGit::before {
     content: '';
-    background-image: url(Assets/github.svg);
+    background-image: url(./github.svg);
     background-size: contain;
     width: 16px;
     height: 16px;
@@ -235,7 +235,7 @@ img, video, svg { height: auto; max-width: 100%; }
 
 #mailLink::before {
     content: '';
-    background-image: url(Assets/mail-svgrepo-com.svg);
+    background-image: url(./mail-svgrepo-com.svg);
     background-size: contain;
     width: 16px;
     height: 16px;
@@ -246,7 +246,7 @@ img, video, svg { height: auto; max-width: 100%; }
 }
 
 #mailLink:hover::before {
-  background-image: url(Assets/mail-open-svgrepo-com.svg);
+  background-image: url(./mail-open-svgrepo-com.svg);
 }
 
 #naranja{
@@ -500,11 +500,11 @@ line{
 }
 
 #mailImg {
-  content: url('Assets/mail-svgrepo-com.svg');
+  content: url('./mail-svgrepo-com.svg');
 }
 
 #mailImg:hover {
-  content: url('Assets/mail-open-svgrepo-com.svg');
+  content: url('./mail-open-svgrepo-com.svg');
 }
 
 .card:hover .footer {
@@ -519,12 +519,14 @@ p{
 
 footer{
   background-color: rgb(235, 235, 235);/*background-color: rgb(235, 235, 235);*/
-  width: auto;
+  width: 100%;
   position: relative;
   bottom: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 
@@ -590,6 +592,12 @@ footer img:active{
 
 #amarillo .forkedLink{
   text-decoration: underline;
+  text-underline-offset: .2rem;
+  color: #9198A1;
+}
+
+#amarillo .forkedLink:hover {
+  color: rgb(68, 147, 248);
 }
 
 #amarillo .updateDate{
@@ -752,4 +760,8 @@ footer img:active{
 #CL:hover #CLleter::after {
   content: 'etter';
   opacity: 1;
+}
+
+.badge {
+  margin-inline: 2px;
 }
