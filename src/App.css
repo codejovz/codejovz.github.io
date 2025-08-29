@@ -211,7 +211,7 @@ img, video, svg { height: auto; max-width: 100%; }
 
   #menuLin::before {
     content: '';
-    background-image: url(./linkedin.svg);
+    background-image: url(/linkedin.svg);
     background-size: contain;
     width: 16px;
     height: 16px;
@@ -223,7 +223,7 @@ img, video, svg { height: auto; max-width: 100%; }
 
 #menuGit::before {
     content: '';
-    background-image: url(./github.svg);
+    background-image: url(/github.svg);
     background-size: contain;
     width: 16px;
     height: 16px;
@@ -235,7 +235,7 @@ img, video, svg { height: auto; max-width: 100%; }
 
 #mailLink::before {
     content: '';
-    background-image: url(./mail-svgrepo-com.svg);
+    background-image: url(/mail-svgrepo-com.svg);
     background-size: contain;
     width: 16px;
     height: 16px;
@@ -246,7 +246,7 @@ img, video, svg { height: auto; max-width: 100%; }
 }
 
 #mailLink:hover::before {
-  background-image: url(./mail-open-svgrepo-com.svg);
+  background-image: url(/mail-open-svgrepo-com.svg);
 }
 
 #naranja{
