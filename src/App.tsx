@@ -162,18 +162,18 @@ function App()  {
 
             <footer>
                 <a href="mailto:jorgevarelazamora@gmail.com">
-                    <img src="./mail-svgrepo-com.svg" alt="Mail logo" id="mailImg" />
+                    <img src="public/mail-svgrepo-com.svg" alt="Mail logo" id="mailImg" />
                 </a>
 
                 <a href="//www.linkedin.com/in/jorge-varela-zamora">
-                    <img src="./linkedin.svg" alt="Linkedin logo" />
+                    <img src="public/linkedin.svg" alt="Linkedin logo" />
                 </a>
                 <a href="https://github.com/codejovz">
-                    <img src="./github.svg" alt="Github logo" />
+                    <img src="public/github.svg" alt="Github logo" />
                 </a>
 
                 <a href="https://codepen.io/codejovz">
-                    <img src="./codepen.svg" alt="Codepen logo" />
+                    <img src="public/codepen.svg" alt="Codepen logo" />
                 </a>
 
             </footer>
