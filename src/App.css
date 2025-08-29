@@ -504,7 +504,7 @@ line{
 }
 
 #mailImg:hover {
-  content: url('./mail-open-svgrepo-com.svg');
+  content: url('public/mail-open-svgrepo-com.svg');
 }
 
 .card:hover .footer {
