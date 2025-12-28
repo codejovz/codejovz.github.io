@@ -6,9 +6,15 @@ export default function Menu() {
     let diagonal: boolean = false;
     const menuIcon = document.getElementById('menu_icon') as HTMLElement | null;
     const menu = document.getElementById('menu') as HTMLElement | null;
+    let menuTitle: SVGTitleElement | null = null;
     const body = document.body;
 
     if (menuIcon) {
+      // For SVG, use <title> element for tooltip
+      menuTitle = document.createElementNS('http://www.w3.org/2000/svg', 'title');
+      menuTitle.textContent = "Open Menu";
+      menuIcon.appendChild(menuTitle);
+
       menuIcon.onclick = () => {
         const line1 = document.getElementById('line1') as HTMLElement | null;
         const line2 = document.getElementById('line2') as HTMLElement | null;
@@ -23,6 +29,7 @@ export default function Menu() {
           menu.style.display = 'block';
           menu.style.transform = 'translateX(0)';
           body.style.overflow = 'hidden';
+          if (menuTitle) menuTitle.textContent = "Close Menu";
           diagonal = true;
         } else {
           line1.style.transform = ' translateX(0px) translateY(0px) rotate(0deg)';
@@ -31,6 +38,7 @@ export default function Menu() {
           menu.style.transform = 'translateX(0px)';
           menu.style.display = 'none';
           body.style.overflow = 'auto';
+          if (menuTitle) menuTitle.textContent = "Open Menu";
           diagonal = false;
         }
       };
@@ -55,6 +63,7 @@ export default function Menu() {
     let incompleta = true;
 
     if (boton1 && naranja && CLContent) {
+      boton1.title = "Open Cover Letter";
       boton1.addEventListener('click', (e) => {
         e.preventDefault();
 
@@ -82,6 +91,7 @@ export default function Menu() {
             body.style.overflow = 'hidden';
 
             CLContent.style.animation = 'muestraParrafo 0.3s ease-in-out forwards';
+            boton1.title = "Close Cover Letter";
             incompleta = false;
           });
         } else {
@@ -103,6 +113,7 @@ export default function Menu() {
             body.style.overflow = 'auto';
 
             CLContent.style.animation = 'ocultaParrafo 0.3s ease-in-out forwards';
+            boton1.title = "Open Cover Letter";
             incompleta = true;
           });
         }
