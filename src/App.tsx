@@ -14,15 +14,16 @@ function App()  {
 
                 <article id="rojo" className="box"> {/*I've named these after color names to make editing more intuitive*/}
                     <h1>Jorge Varela Zamora</h1>
-                    <h2>A Cross-Platform Applications Degree dev.</h2>
+                    <h2>Software developer</h2>
                 </article>
 
                 <article id="verde" className="box">
 
                     <section>
-                        <h2>Technologies:</h2>
+                        <h2>🛠️ Technologies:</h2>
                         <img className="badge" src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python"/>
                         <img className="badge" src="https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin"/>
+                        <img className="badge" src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
                         <img className="badge" src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
 
                         <img className="badge" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt=""/>
@@ -32,7 +33,7 @@ function App()  {
                     </section>
 
                     <section>
-                        <h2>IDEs/Editors:</h2>
+                        <h2>💻 IDEs/Editors:</h2>
                         <img className="badge" src="https://img.shields.io/badge/Eclipse-FE7A16.svg?style=for-the-badge&logo=Eclipse&logoColor=white" alt="Eclipse"/>
                         <img className="badge" src="https://img.shields.io/badge/android%20studio-1a82de?style=for-the-badge&logo=android%20studio&logoColor=white" alt="Android Studio"/>
                         <img className="badge" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="Visual Studio Code"/>
@@ -41,7 +42,9 @@ function App()  {
                     </section>
 
                     <section>
-                        <h2>📚Frameworks:</h2>
+                        <h2>📚 Libraries & Frameworks:</h2>
+                        <img className="badge" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React"/>
+                        <img className="badge" src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next JS"/>
                         <img className="badge" src="https://img.shields.io/badge/Swing-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="SWING"/>
                         <img className="badge" src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white" alt=".NET"/>
                     </section>
@@ -54,10 +57,9 @@ function App()  {
                     <section>
                         <details>
                         <summary>🧠Learning and interested on:</summary>
-                            <img className="badge" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React.js"/>
                             <img className="badge" src="https://img.shields.io/badge/%F0%9F%A4%96-Artificial%20Intelligence-4c2271?style=for-the-badge&labelColor=lightgrey" alt="Artificial intelligence"/>
                             <img className="badge" src="https://img.shields.io/badge/%F0%9F%93%B1-Mobile%20development-4c2271?style=for-the-badge&labelColor=lightgrey" alt="Mobile Development"/>
-        
+                            <img className="badge" src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js"/>
                         </details>
                     </section>
 
@@ -134,15 +136,17 @@ function App()  {
                     <h2>More about me &#40;<span id="CL"> <span id="CLcover">C</span><span id="CLleter">L</span></span>&#41;:</h2>
         
                     <section id="CL_content">
-                        <p>This is the main reason you should NOT upload a project on Friday evening:
-                        Some colours are not matching, transitions might not transition...</p>
-                        <p>Nonetheless, I hope you enjoy my Portfolio!</p>
-                        <p>I am a Cross-Platform Development degree (DAM) student. I have a verifiable B2 level of English and the High School Diploma.</p>
-                        <p>Who was I, before all of this?</p>
-                        <p>I have always loved to drive, so I worked for Seur, Uber and Amazon, and I enjoyed every moment on the road and with the clients.</p>
-                        <p>Then, I got some free time, and came to the conclusion that  I wanted to do something more with my life: archieve more. I wanted to specialize in something and love and study what I do every day. So, I started programming!</p>
-                        <p>I enjoy playing sports, leading an almost entirely active lifestyle, and I try to have a smile on my face every day.</p>
-                        <p>Do you want to know something else about me? Visit my <a href="https://www.linkedin.com/in/jorge-varela-zamora/">Linkedin</a>!</p>
+                        <p>Software developer junior.</p>
+                        <p>Graduated in Advanced Vocational Training in Cross-Platform Application Development(D.A.M.), Madrid.</p>
+                        <p>Drawn to the intersection of business logic and user experience, I research how to optimize the backend by splitting processes and allocating the workload to the server or client depending on the case.</p>
+                        <p>My last archievement: I implemented a FastAPI solution to connect an indefinite number of clients by using WebSockets, preventing each client from making a GET request on every update. By sending a unique signal with all the changes from the server, I managed to reduce the workload on both the server and the clients by up to 80%. I also integrated user authentication via Microsoft Azure, providing secure access.</p>
+                        <p>I used Artificial Intelligence locally with Hugging Face, Python, VQA y OCR, exposing endpoints, and inserting data at DDBB (MySQL → HeidiSQL).
+Used to acrhitectures like Hexagonal, Model View Controller (MVC), Monolite, as well as methodologies such as ‘Agile’ y SCRUM’.
+This allows me not only build scallable and mantenible software, but also to make it understandable for other developers.</p>
+                        <p>I use React, TypeScript and Next.js for full-stack web solutions, while for separate solutions, I have more experience with Python / Vite and FastAPI.</p>
+                        <p>I stand out because of my quick learning ability, professional honesty, and creative approach to development solutions.</p>
+                        <p>I am able to adapt quickly to new tools and methodologies. I am also clear and honest when communicating the real status of my work, which makes coordination easier in multi-disciplinary teams. I have a verifiable B2 level of english, and the High School diploma.</p>
+                        <p>Do you want to know something else about me? Visit my <a href="//www.linkedin.com/in/jorge-varela-zamora/">Linkedin</a>!</p>
                     </section>
             
             </article>
@@ -167,7 +171,7 @@ function App()  {
                     <img src="/mail-svgrepo-com.svg" alt="Mail logo" id="mailImg" />
                 </a>
 
-                <a href="//www.linkedin.com/in/jorge-varela-zamora">
+                <a href="//www.linkedin.com/in/jorge-varela-zamora/">
                     <img src="/linkedin.svg" alt="Linkedin logo" />
                 </a>
                 <a href="https://github.com/codejovz">
