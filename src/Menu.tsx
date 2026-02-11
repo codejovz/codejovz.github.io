@@ -139,7 +139,7 @@ export default function Menu() {
 
     const timeoutId = setTimeout(animateBoxes, 100);
 
-    
+
     return () => {
       clearTimeout(timeoutId);
       if (boton1) boton1.onclick = null;

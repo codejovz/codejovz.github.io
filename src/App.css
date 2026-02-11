@@ -1,21 +1,59 @@
 /* CSS RESET June 2024 ,@MiduDev*/
-* { margin: 0; padding: 0; }
-*, *::before, *::after { box-sizing: border-box; }
-body { min-height: 100dvh; }
-input, button, textarea, select { font: inherit; }
-p { text-wrap: pretty; }
-p{font-family: Helvetica;}
-h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
-img, video, svg { height: auto; max-width: 100%; }
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+img,
+video,
+svg {
+  height: auto;
+  max-width: 100%;
+}
 
 @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-        animation-duration: 0.01ms ! important;
-        animation-iteration-count: 1 ! important;
-        transition-duration: 0.01ms important;
-        scroll-behavior: auto ! important;
-        transition: none;
-    }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms ! important;
+    animation-iteration-count: 1 ! important;
+    transition-duration: 0.01ms important;
+    scroll-behavior: auto ! important;
+    transition: none;
+  }
 }
 
 .container {
@@ -34,7 +72,7 @@ img, video, svg { height: auto; max-width: 100%; }
 
 @media (min-width: 600px) {
 
-  header{
+  header {
     margin-top: 34px;
   }
 
@@ -47,7 +85,7 @@ img, video, svg { height: auto; max-width: 100%; }
     width: calc(50% - 10px);
   }
 
-  #verde{
+  #verde {
 
     height: 480px;
     margin-top: 40px;
@@ -55,31 +93,28 @@ img, video, svg { height: auto; max-width: 100%; }
     overflow-y: scroll;
   }
 
-  #naranja{
+  #naranja {}
 
-  }
+  #amarillo {}
 
-  #amarillo{
-
-  }
-
-  #rojo{
+  #rojo {
 
     width: calc(60% - 10px);
   }
 
-  .container #naranja{
+  .container #naranja {
     top: 0px;
   }
 
-  #rojo h1{
+  #rojo h1 {
     font-size: 5vw;
   }
 
-  #menu_icon{
+  #menu_icon {
     display: none;
   }
-  #menu{
+
+  #menu {
     display: block;
     right: 0;
     position: static;
@@ -91,12 +126,12 @@ img, video, svg { height: auto; max-width: 100%; }
     background-color: none;
   }
 
-  #menu  a{
+  #menu a {
     text-decoration: none;
     color: inherit;
   }
 
-  li{
+  li {
     display: inline;
     background-color: rgb(235, 235, 235);
     border-color: rgb(120, 120, 120);
@@ -107,29 +142,29 @@ img, video, svg { height: auto; max-width: 100%; }
     border-radius: 10px;
   }
 
-  li:hover{
-    filter:invert();
+  li:hover {
+    filter: invert();
   }
 
-  ul{
+  ul {
     margin-left: 0;
     margin-top: 0;
     font-weight: 700;
   }
 
-  #menu ul li:last-child{
+  #menu ul li:last-child {
     border: 2px solid rgb(235, 235, 235);
     background-color: rgb(120, 120, 120);
     color: rgb(239, 237, 237);
     font-weight: 900;
   }
 
-  #naranja{
+  #naranja {
     position: relative;
     top: 100px;
   }
 
-  footer{
+  footer {
     border-radius: 20px 20px 0 0;
     margin-left: 10px;
     margin-right: 28px;
@@ -137,17 +172,17 @@ img, video, svg { height: auto; max-width: 100%; }
 
 }
 
-@media(max-width:600px){
+@media(max-width:600px) {
 
-  header{
+  header {
     margin-top: 34px;
   }
 
-  #menu_icon{
+  #menu_icon {
     display: block;
   }
 
-  #menu{
+  #menu {
     display: none;
     width: 100vw;
     height: 100vh;
@@ -156,20 +191,21 @@ img, video, svg { height: auto; max-width: 100%; }
     background-color: rgb(235, 235, 235);
   }
 
-  ul{
+  ul {
     margin-left: 45vw;
     margin-top: 40px;
   }
 
-  #menu ul li:first-child{
+  #menu ul li:first-child {
     margin-top: 120px;
   }
 
-  #rojo h1{
+  #rojo h1 {
     font-size: 10vw;
   }
 
-  li{   /*Neumorphism CSS from: https://codepen.io/yuhomyan/pen/abdRKrM*/
+  li {
+    /*Neumorphism CSS from: https://codepen.io/yuhomyan/pen/abdRKrM*/
     height: 50px;
     max-width: 180px;
     min-width: 180px;
@@ -181,29 +217,30 @@ img, video, svg { height: auto; max-width: 100%; }
     display: flex;
     align-items: center;
     justify-content: center;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
     box-shadow:
-     -7px -7px 20px 0px #fff9,
-     -4px -4px 5px 0px #fff9,
-     7px 7px 20px 0px #0002,
-     4px 4px 5px 0px #0001,
-     inset 0px 0px 0px 0px #fff9,
-     inset 0px 0px 0px 0px #0001,
-     inset 0px 0px 0px 0px #fff9,        inset 0px 0px 0px 0px #0001;
-   transition:box-shadow 0.6s cubic-bezier(.79,.21,.06,.81);
+      -7px -7px 20px 0px #fff9,
+      -4px -4px 5px 0px #fff9,
+      7px 7px 20px 0px #0002,
+      4px 4px 5px 0px #0001,
+      inset 0px 0px 0px 0px #fff9,
+      inset 0px 0px 0px 0px #0001,
+      inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+    transition: box-shadow 0.6s cubic-bezier(.79, .21, .06, .81);
     font-size: 16px;
     color: rgba(42, 52, 84, 1);
     text-decoration: none;
   }
-  li:active{
-    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+
+  li:active {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+      -4px -4px 6px 0 rgba(116, 125, 136, .2),
+      inset -4px -4px 6px 0 rgba(255, 255, 255, .5),
       inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
   }
 
-  li a{
+  li a {
     color: black;
   }
 
@@ -219,9 +256,9 @@ img, video, svg { height: auto; max-width: 100%; }
     top: 4px;
     display: inline-block;
     margin-right: 8px;
-}
+  }
 
-#menuGit::before {
+  #menuGit::before {
     content: '';
     background-image: url(/github.svg);
     background-size: contain;
@@ -231,9 +268,9 @@ img, video, svg { height: auto; max-width: 100%; }
     top: 1px;
     display: inline-block;
     margin-right: 8px;
-}
+  }
 
-#mailLink::before {
+  #mailLink::before {
     content: '';
     background-image: url(/mail-svgrepo-com.svg);
     background-size: contain;
@@ -243,30 +280,30 @@ img, video, svg { height: auto; max-width: 100%; }
     top: 1px;
     display: inline-block;
     margin-right: 8px;
+  }
+
+  #mailLink:hover::before {
+    background-image: url(/mail-open-svgrepo-com.svg);
+  }
+
+  #naranja {
+    position: relative;
+    top: 100px;
+  }
+
+  footer {
+    border-radius: 20px 20px 0 0;
+    margin-left: 10px;
+    margin-right: 28px;
+  }
+
 }
 
-#mailLink:hover::before {
-  background-image: url(/mail-open-svgrepo-com.svg);
-}
+@media(max-width:400px) {
 
-#naranja{
-  position: relative;
-  top: 100px;
-}
-
-footer{
-  border-radius: 20px 20px 0 0;
-  margin-left: 10px;
-  margin-right: 28px;
-}
-
-}
-
-@media(max-width:400px){
-
-  header{
+  header {
     margin-top: 34px;
-    margin-bottom: -6px ;
+    margin-bottom: -6px;
   }
 
   .container {
@@ -275,98 +312,100 @@ footer{
     margin-bottom: 30px;
   }
 
-  #rojo h1{
+  #rojo h1 {
     margin-inline: 10px;
   }
 
-  #rojo h2{
+  #rojo h2 {
     font-size: 120%;
     text-wrap: auto;
     margin-inline: 10px;
   }
 
-  #naranja{
+  #naranja {
     position: relative;
     top: 0px;
   }
 
-  footer{
+  footer {
     border-radius: 0px 0px 0 0;
     margin-left: 0px;
     margin-right: 0px;
   }
 
-  #naranja{
+  #naranja {
     overflow-y: scroll;
     height: fit-content;
   }
 
-  #CL_content p, #CL_content a{
+  #CL_content p,
+  #CL_content a {
     font-size: 80%;
   }
 
-  li:active, li:hover{
-    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+  li:active,
+  li:hover {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+      -4px -4px 6px 0 rgba(116, 125, 136, .2),
+      inset -4px -4px 6px 0 rgba(255, 255, 255, .5),
       inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
   }
 
 }
 
 
-#rojo h1{
+#rojo h1 {
   white-space: nowrap;
   font-family: "Crimson Text", serif;
 }
 
-#verde section{
+#verde section {
   margin-bottom: 8px;
 }
 
-#fullScreenButton:hover{
-  cursor:pointer;
+#fullScreenButton:hover {
+  cursor: pointer;
 }
 
-header{
-  margin-left:20px;
-  font-family:Arial, Helvetica, sans-serif;
+header {
+  margin-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 
-button{
+button {
   border: none;
   border-radius: 50%;
   margin: 20px;
-  padding:8px;
+  padding: 8px;
   width: 40px;
   height: 40px;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-button:hover{
+button:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-polyline{
-  fill:none;
-  stroke:black;
+polyline {
+  fill: none;
+  stroke: black;
   stroke-linecap: round;
   stroke-width: 12;
 }
 
-body{
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
-line{
-    transition:all 0.3s;
-    stroke: rgba(74,51,49,0.8);
+line {
+  transition: all 0.3s;
+  stroke: rgba(74, 51, 49, 0.8);
 }
 
-#menu_icon{
+#menu_icon {
   cursor: pointer;
   position: absolute;
   top: 20px;
@@ -377,31 +416,31 @@ line{
   transition: all 1s;
 }
 
-#menu_icon:hover{
+#menu_icon:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-#menu ul{
+#menu ul {
   list-style-type: none;
 }
 
 
-#fullScreenButton{
-    width: 40px;
-    height: 40px;
+#fullScreenButton {
+  width: 40px;
+  height: 40px;
 }
 
-#menuButton{
+#menuButton {
   z-index: 999;
 }
 
-#menu{
-    position: absolute;
-    top: 0px;
-    z-index: 998;
+#menu {
+  position: absolute;
+  top: 0px;
+  z-index: 998;
 }
 
-.box{
+.box {
   border-radius: 20px;
   border: 0px solid black;
   background-color: rgb(235, 235, 235);
@@ -417,13 +456,13 @@ line{
   position: relative;
 }
 
-#verde{
+#verde {
   min-height: 260px;
   padding: 14px;
   overflow-y: auto;
 }
 
-#amarillo{
+#amarillo {
   position: relative;
   border: 1px solid rgba(255, 255, 0, 0);
   background-color: #101414;
@@ -433,25 +472,31 @@ line{
   scroll-snap-type: x mandatory;
 }
 
-#naranja{
-    height: 240px;
-    border-radius: 20px;
-    position: relative;
-    transition: height 0.3s ease-in-out, width 0.3s ease-in-out;
-    overflow: hidden;
+#naranja {
+  height: 240px;
+  border-radius: 20px;
+  position: relative;
+  transition: height 0.3s ease-in-out, width 0.3s ease-in-out;
+  overflow: hidden;
+  font-family: 'Google Sans Text', 'Google Sans';
+  display: flex;
+  flex-direction: column;
 }
 
-#naranja p{
+#naranja p {
   font-weight: normal;
 }
 
 
-#CL_content{
+#CL_content {
   opacity: 0;
   color: black;
-  animation:none;
-  position:relative;
-  top:40px;
+  animation: none;
+  position: relative;
+  margin-top: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 20px;
 }
 
 #naranja h2 {
@@ -461,14 +506,14 @@ line{
 }
 
 
-#CL_content p{
+#CL_content p {
   margin-bottom: 14px;
   margin-left: 22px;
   margin-right: 22px;
   color: rgb(14, 14, 14);
 }
 
-#CL_content p a{
+#CL_content p a {
   color: rgb(255, 255, 255);
   padding-bottom: 2px;
   padding-inline: 8px;
@@ -477,26 +522,26 @@ line{
   font-weight: 900;
 }
 
-#CL_content p a:hover{
+#CL_content p a:hover {
   color: rgb(0, 0, 0);
   border: 1px solid black;
 }
 
-.footer2{
+.footer2 {
   color: red;
 }
 
 
-.footer{
-    position: relative;
-    top: 110%;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.799);
-    padding-top: 28%;
-    padding-inline: 5%;
-    transition:all 0.3s ease-in-out;
-    /*-webkit-backdrop-filter: blur(5px);
+.footer {
+  position: relative;
+  top: 110%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.799);
+  padding-top: 28%;
+  padding-inline: 5%;
+  transition: all 0.3s ease-in-out;
+  /*-webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);*/
 }
 
@@ -512,14 +557,15 @@ line{
   top: 0%;
 }
 
-p{
-    color: white;
-    font-weight: 900;
+p {
+  color: white;
+  font-weight: 900;
 }
 
 
-footer{
-  background-color: rgb(235, 235, 235);/*background-color: rgb(235, 235, 235);*/
+footer {
+  background-color: rgb(235, 235, 235);
+  /*background-color: rgb(235, 235, 235);*/
   width: 100%;
   position: relative;
   bottom: 0px;
@@ -531,7 +577,8 @@ footer{
 }
 
 
-footer img{   /*Neumorphism CSS from: https://codepen.io/yuhomyan/pen/abdRKrM*/
+footer img {
+  /*Neumorphism CSS from: https://codepen.io/yuhomyan/pen/abdRKrM*/
   height: 50px;
   margin: 10px;
   padding: 2px;
@@ -541,57 +588,58 @@ footer img{   /*Neumorphism CSS from: https://codepen.io/yuhomyan/pen/abdRKrM*/
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
   box-shadow:
-   -7px -7px 20px 0px #fff9,
-   -4px -4px 5px 0px #fff9,
-   7px 7px 20px 0px #0002,
-   4px 4px 5px 0px #0001,
-   inset 0px 0px 0px 0px #fff9,
-   inset 0px 0px 0px 0px #0001,
-   inset 0px 0px 0px 0px #fff9,        inset 0px 0px 0px 0px #0001;
- transition:box-shadow 0.6s cubic-bezier(.79,.21,.06,.81);
+    -7px -7px 20px 0px #fff9,
+    -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002,
+    4px 4px 5px 0px #0001,
+    inset 0px 0px 0px 0px #fff9,
+    inset 0px 0px 0px 0px #0001,
+    inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+  transition: box-shadow 0.6s cubic-bezier(.79, .21, .06, .81);
   font-size: 16px;
   color: rgba(42, 52, 84, 1);
   text-decoration: none;
 }
-footer img:active{
-  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+
+footer img:active {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+    -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, .5),
     inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
 }
 
-@keyframes muestraParrafo{
-  
-  from{
-    opacity: 0;
-    transform:translateY(0px);
-  }
-  
-  to{
-   opacity: 1;
-   transform:translateY(-30px);
-  }
-  
-}
+@keyframes muestraParrafo {
 
-@keyframes ocultaParrafo{
-  
-  from{
+  from {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  to {
     opacity: 1;
     transform: translateY(-30px);
   }
-  
-  to{
-   opacity: 0;
-    transform: translateY(0px);
-  }
-  
+
 }
 
-#amarillo .forkedLink{
+@keyframes ocultaParrafo {
+
+  from {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+}
+
+#amarillo .forkedLink {
   text-decoration: underline;
   text-underline-offset: .2rem;
   color: #9198A1;
@@ -601,19 +649,19 @@ footer img:active{
   color: rgb(68, 147, 248);
 }
 
-#amarillo .updateDate{
+#amarillo .updateDate {
   margin-left: 10px;
 }
 
-#amarillo a{
+#amarillo a {
   text-decoration: none;
 }
 
-#amarillo a:hover{
+#amarillo a:hover {
   text-decoration: underline;
 }
 
-#amarillo > p {
+#amarillo>p {
   position: sticky;
   bottom: 0;
   left: 0;
@@ -647,17 +695,17 @@ footer img:active{
 }
 
 
-.scroll-item p{
+.scroll-item p {
   margin-left: 0;
   text-align: start;
   font-size: 14px;
   font-weight: 400;
   color: #9198a1;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 
-.repVisib{
+.repVisib {
   border: 1px solid #9198A1;
   color: #9198A1;
   border-radius: 20px;
@@ -665,16 +713,16 @@ footer img:active{
   padding-bottom: 2px;
 }
 
-.repFork{
+.repFork {
   font-size: 12px;
   margin: 0px 0px 4px;
 }
 
-.repFork a{
+.repFork a {
   text-decoration: underline;
 }
 
-.repTags a{
+.repTags a {
   border: 1px solid black;
   border-radius: 12px;
   color: #4493f8;
@@ -685,23 +733,23 @@ footer img:active{
   font-weight: 600;
 }
 
-.repTitle{
+.repTitle {
   color: #4493f8;
   font-size: 20px;
   font-weight: 700;
 }
 
-.repDesc{
+.repDesc {
   font-size: 14px;
   margin: 0px 0px 8px;
 }
 
-.repLast{
+.repLast {
   font-size: 12px;
   margin: 8px 0px 0px;
 }
 
-.java::before{
+.java::before {
   content: "";
   height: 12px;
   width: 12px;
@@ -710,7 +758,7 @@ footer img:active{
   display: inline-block;
 }
 
-.javascript::before{
+.javascript::before {
   content: "";
   width: 12px;
   height: 12px;
@@ -719,7 +767,7 @@ footer img:active{
   display: inline-block;
 }
 
-.kotlin::before{
+.kotlin::before {
   content: "";
   height: 12px;
   width: 12px;
@@ -728,7 +776,7 @@ footer img:active{
   display: inline-block;
 }
 
-.liscence{
+.liscence {
   width: 24px;
   height: 24px;
   margin-bottom: -10px;
@@ -736,7 +784,7 @@ footer img:active{
   margin-right: -8px;
 }
 
-#menuButton{
+#menuButton {
   background-color: rgba(255, 0, 0, 0);
 }
 
