@@ -1,0 +1,220 @@
+.resumeeContainer h2 {
+    font-family: 'Google Sans';
+    margin-bottom: 1rem;
+}
+
+.resumeeContainer h3 {
+    margin-top: 2rem;
+}
+
+.resumeeContainer h4,
+.resumeeContainer p {
+    font-family: 'Google Sans Text', 'Google Sans';
+    font-weight: 900;
+}
+
+.workExperience>details>summary>span,
+.workExperience>details>summary {
+    font-family: 'Google Sans Text', 'Google Sans';
+    font-weight: 300;
+}
+
+.resumeeContainer {
+    position: relative;
+    width: 100%;
+    padding: 5rem;
+}
+
+.experiencesTimeline {
+    position: relative;
+    padding-left: 3.5rem;
+    margin-top: 1rem;
+    min-height: 20rem;
+}
+
+.resumeeProgressBar {
+    position: absolute;
+    left: 1.75rem;
+    transform: translateX(-50%);
+    top: 3.1rem;
+    height: calc(100% - 3.1rem - 0.5rem);
+    width: 4px;
+    appearance: none;
+    border: none;
+    background-color: #e0e0e0;
+    z-index: 1;
+    writing-mode: vertical-lr;
+}
+
+.resumeeProgressBar::-webkit-progress-bar {
+    background-color: #e0e0e0;
+}
+
+.resumeeProgressBar::-webkit-progress-value {
+    background-color: var(--primary-color, #007bff);
+}
+
+.jobMarkerContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.jobMarker {
+    position: absolute;
+    left: -1.75rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color, #007bff);
+    background-color: white;
+    z-index: 2;
+}
+
+.experiencesTimeline section {
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.experiencesTimeline section .companyLogo {
+    position: absolute;
+    left: -1.75rem;
+    top: 1.1rem;
+    transform: translate(-50%, -50%);
+    width: 2.2rem;
+    height: 2.2rem;
+    object-fit: cover;
+    border-radius: 4px;
+    background-color: white;
+    z-index: 2;
+    border: 1px solid #eee;
+}
+
+.experiencesTimeline section h3 {
+    margin: 0;
+    line-height: 2.2rem;
+    font-size: 1.4rem;
+}
+
+.experiencesTimeline section h4 {
+    margin: 0.25rem 0;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.jobMeta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.jobMeta small {
+    color: #666;
+}
+
+.resumeeContainer p {
+    color: black;
+    font-weight: 500;
+}
+
+.resumeeContainer p+p {
+    margin-top: 0.5rem;
+}
+
+.resumeeContainer small {
+    color: rgb(55, 55, 55);
+    font-weight: 500;
+
+}
+
+.resumeeContainer small.period {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .resumeeContainer {
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .resumeeContainer {
+        padding: 1.5rem;
+    }
+
+    .experiencesTimeline {
+        padding-left: 2.5rem;
+    }
+
+    .resumeeProgressBar {
+        left: 1.25rem;
+    }
+
+    .jobMarker {
+        left: -1.25rem;
+    }
+
+    .experiencesTimeline section .companyLogo {
+        left: -1.25rem;
+    }
+
+    .experiencesTimeline section {
+        margin-bottom: 3rem;
+    }
+}
+
+.skillsDetails {
+    display: inline;
+}
+
+/* Override Chromium's internal block-level content slot only when open */
+.skillsDetails[open]::details-content {
+    display: inline;
+}
+
+.skillsDetails>summary {
+    display: inline;
+    cursor: pointer;
+    list-style: none;
+    /* Remove native marker */
+}
+
+/* Hide native marker in WebKit */
+.skillsDetails>summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Custom triangle marker */
+.skillsDetails>summary::before {
+    content: '▶';
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 0.5rem;
+    transition: transform 0.2s;
+    color: black;
+}
+
+.skillsDetails[open]>summary::before {
+    transform: rotate(90deg);
+}
+
+/* Hide '+ x more' text when expanded */
+.skillsDetails[open] .moreSkills {
+    display: none;
+}
+
+/* Ensure expanded content flows inline */
+.remainingSkills {
+    display: inline;
+    font-family: 'Google Sans Text', 'Google Sans';
+    font-weight: 500;
+}
+
+/* Force details to stay inline when open */
+.skillsDetails[open] {
+    display: inline;
+}

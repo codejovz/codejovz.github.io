@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/react'
 import Menu from './Menu.tsx';
 import './App.css'
 import ShowcaseContainer from './features/showcase/ShowcaseContainer.tsx';
+import ResumeeContainer from './features/resumee/ResumeeContainer.tsx';
 
 function App() {
 
@@ -20,9 +21,18 @@ function App() {
 
                 <ShowcaseContainer />
 
+                <ResumeeContainer />
+
                 <article id="amarillo" className="box">
 
                     <div className="scroll-container">
+
+                        <section className="scroll-item">
+                            <p><a className="repTitle" href="https://github.com/codejovz/badges-codejovz">badges-codejovz</a> <span className="repVisib">Public</span></p>
+                            <p className="repDesc">Ready to use markdown svg badges.</p>
+                            <p className="repTags"><a href="https://github.com/topics/react-router">react-router</a> <a href="https://github.com/topics/reactjs">reactjs</a> <a href="https://github.com/topics/badges">badges</a> <a href="https://github.com/topics/public-transport">public-transport</a></p>
+                            <p><span className="javascript">javascript</span> <span className="updateDate">Updated on Aug 13, 2025</span></p>
+                        </section>
 
                         <section className="scroll-item">
                             <p><a className="repTitle" href="https://github.com/codejovz/DevHeat">DevHeat</a> <span className="repVisib">Public</span></p>
@@ -30,13 +40,6 @@ function App() {
                             <p className="repDesc">Automates GitHub profile edition and creation of READMEs.</p>
                             <p className="repTags"><a href="https://github.com/topics/readme">readme</a> <a href="https://github.com/topics/app">app</a> <a href="https://github.com/topics/automation">automation</a></p>
                             <p><span className="kotlin">Kotlin</span><img className="liscence" src="./octicon_law.svg" /> The Unlicense <span className="updateDate">Updated on Jun 19, 2025</span></p>
-                        </section>
-
-                        <section className="scroll-item">
-                            <p><a className="repTitle" href="https://github.com/codejovz/badges-codejovz">badges-codejovz</a> <span className="repVisib">Public</span></p>
-                            <p className="repDesc">Ready to use markdown svg badges.</p>
-                            <p className="repTags"><a href="https://github.com/topics/react-router">react-router</a> <a href="https://github.com/topics/reactjs">reactjs</a> <a href="https://github.com/topics/badges">badges</a> <a href="https://github.com/topics/public-transport">public-transport</a></p>
-                            <p><span className="javascript">javascript</span> <span className="updateDate">Updated on Aug 13, 2025</span></p>
                         </section>
 
                         <section className="scroll-item">
