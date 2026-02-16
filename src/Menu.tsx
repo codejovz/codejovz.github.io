@@ -15,33 +15,57 @@ export default function Menu() {
       menuTitle.textContent = "Open Menu";
       menuIcon.appendChild(menuTitle);
 
-      menuIcon.onclick = () => {
+      const closeMenu = () => {
         const line1 = document.getElementById('line1') as HTMLElement | null;
         const line2 = document.getElementById('line2') as HTMLElement | null;
         const line3 = document.getElementById('line3') as HTMLElement | null;
 
         if (!line1 || !line2 || !line3 || !menu) return;
 
+        line1.style.transform = ' translateX(0px) translateY(0px) rotate(0deg)';
+        line2.style.opacity = '1';
+        line3.style.transform = ' translateX(0px) translateY(-0px) rotate(0deg)';
+        menu.style.transform = 'translateX(0px)';
+        menu.style.display = 'none';
+        body.style.overflow = 'auto';
+        if (menuTitle) menuTitle.textContent = "Open Menu";
+        diagonal = false;
+      };
+
+      const openMenu = () => {
+        const line1 = document.getElementById('line1') as HTMLElement | null;
+        const line2 = document.getElementById('line2') as HTMLElement | null;
+        const line3 = document.getElementById('line3') as HTMLElement | null;
+
+        if (!line1 || !line2 || !line3 || !menu) return;
+
+        line1.style.transform = ' translateX(36px) translateY(-8px) rotate(45deg)';
+        line2.style.opacity = '0';
+        line3.style.transform = ' translateX(-36px) translateY(34px) rotate(-45deg)';
+        menu.style.display = 'block';
+        menu.style.transform = 'translateX(0)';
+        body.style.overflow = 'hidden';
+        if (menuTitle) menuTitle.textContent = "Close Menu";
+        diagonal = true;
+      };
+
+      menuIcon.onclick = () => {
         if (!diagonal) {
-          line1.style.transform = ' translateX(36px) translateY(-8px) rotate(45deg)';
-          line2.style.opacity = '0';
-          line3.style.transform = ' translateX(-36px) translateY(34px) rotate(-45deg)';
-          menu.style.display = 'block';
-          menu.style.transform = 'translateX(0)';
-          body.style.overflow = 'hidden';
-          if (menuTitle) menuTitle.textContent = "Close Menu";
-          diagonal = true;
+          openMenu();
         } else {
-          line1.style.transform = ' translateX(0px) translateY(0px) rotate(0deg)';
-          line2.style.opacity = '1';
-          line3.style.transform = ' translateX(0px) translateY(-0px) rotate(0deg)';
-          menu.style.transform = 'translateX(0px)';
-          menu.style.display = 'none';
-          body.style.overflow = 'auto';
-          if (menuTitle) menuTitle.textContent = "Open Menu";
-          diagonal = false;
+          closeMenu();
         }
       };
+
+      // Close menu when clicking links
+      if (menu) {
+        const links = menu.querySelectorAll('a');
+        links.forEach(link => {
+          link.onclick = () => {
+            closeMenu();
+          };
+        });
+      }
     }
 
     //Script Full screen button
