@@ -70,6 +70,15 @@ svg {
   background-repeat: no-repeat;
 }
 
+.menu_icon {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  margin-right: 4px;
+}
+
 @media (min-width: 600px) {
 
   header {
@@ -191,6 +200,12 @@ svg {
     background-color: rgb(235, 235, 235);
   }
 
+  .menu_icon {
+    margin-right: 6px;
+    width: 20px;
+    height: 20px;
+  }
+
   ul {
     margin-left: 45vw;
     margin-top: 40px;
@@ -242,32 +257,6 @@ svg {
 
   li a {
     color: black;
-  }
-
-
-
-  #menuLin::before {
-    content: '';
-    background-image: url(/linkedin.svg);
-    background-size: contain;
-    width: 16px;
-    height: 16px;
-    position: relative;
-    top: 4px;
-    display: inline-block;
-    margin-right: 8px;
-  }
-
-  #menuGit::before {
-    content: '';
-    background-image: url(/github.svg);
-    background-size: contain;
-    width: 16px;
-    height: 16px;
-    position: relative;
-    top: 1px;
-    display: inline-block;
-    margin-right: 8px;
   }
 
   #mailLink::before {

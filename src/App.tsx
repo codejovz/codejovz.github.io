@@ -1,6 +1,7 @@
-import { Analytics } from '@vercel/analytics/react'
+import { Analytics } from '@vercel/analytics/react';
+import { SvgInline } from 'react-svg-inliner';
 import Menu from './Menu.tsx';
-import './App.css'
+import './App.css';
 import ShowcaseContainer from './features/showcase/ShowcaseContainer.tsx';
 import ResumeeContainer from './features/resumee/ResumeeContainer.tsx';
 
@@ -85,7 +86,7 @@ function App() {
                         </svg>
                     </button>
 
-                    <h2>More about me &#40;<span id="CL"> <span id="CLcover">C</span><span id="CLleter">L</span></span>&#41;:</h2>
+                    <h2 id="CL_title">More about me &#40;<span id="CL"> <span id="CLcover">C</span><span id="CLleter">L</span></span>&#41;:</h2>
 
                     <section id="CL_content">
                         <p>Software developer junior.</p>
@@ -106,9 +107,24 @@ function App() {
 
                 <nav id="menu">
                     <ul>
-                        <li id="menuLin"><a href="https://www.linkedin.com/in/jorge-varela-zamora/">Linkedin</a></li>
-                        <li id="menuGit"><a href="https://github.com/codejovz">Github</a></li>
-                        <li id="mailLink"><a href="mailto:jorgevarelazamora@gmail.com">Mail me</a></li>
+                        <li id="menuAbout">
+                            <SvgInline
+                                className="menu_icon"
+                                src="/icons/google/engineering_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24.svg"
+                            />
+                            <a href="#CL_title">About</a>
+                        </li>
+                        <li id="menuProjects">
+                            <SvgInline
+                                className="menu_icon"
+                                src="/icons/google/folder_code_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24.svg"
+                            />
+                            <a href="#amarillo">Projects</a>
+                        </li>
+                        <li id="menuCoverLetter">
+                            <SvgInline className="menu_icon" src="/icons/google/article_person_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24.svg" />
+                            <a href="#naranja">Cover Letter</a>
+                        </li>
                     </ul>
                 </nav>
 
