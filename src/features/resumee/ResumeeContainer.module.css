@@ -87,9 +87,9 @@
     height: 2.2rem;
     object-fit: cover;
     border-radius: 4px;
-    background-color: white;
+    background-color: var(--text-main);
     z-index: 2;
-    border: 1px solid #eee;
+    border: 1px solid var(--text-main);
 }
 
 .experiencesTimeline section h3 {
@@ -101,7 +101,7 @@
 .experiencesTimeline section h4 {
     margin: 0.25rem 0;
     font-size: 1.2rem;
-    color: #333;
+    color: var(--text-main);
     font-weight: 700;
 }
 
@@ -113,11 +113,11 @@
 }
 
 .jobMeta small {
-    color: #666;
+    color: var(--text-muted);
 }
 
 .resumeeContainer p {
-    color: black;
+    color: var(--text-main);
     font-weight: 500;
 }
 
@@ -126,7 +126,7 @@
 }
 
 .resumeeContainer small {
-    color: rgb(55, 55, 55);
+    color: var(--text-muted);
     font-weight: 500;
 
 }

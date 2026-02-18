@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SvgInline } from 'react-svg-inliner';
 import Menu from './Menu.tsx';
 import './App.css';
+import ThemeSwitcher from './features/theme-switcher/ThemeSwitcher.tsx';
 import ShowcaseContainer from './features/showcase/ShowcaseContainer.tsx';
 import ResumeeContainer from './features/resumee/ResumeeContainer.tsx';
 
@@ -106,7 +107,8 @@ function App() {
 
 
                 <nav id="menu">
-                    <ul>
+                    <ThemeSwitcher className="wide-screen"/>
+                    <ul id="nav-list">
                         <li id="menuAbout">
                             <SvgInline
                                 className="menu_icon"
@@ -126,6 +128,7 @@ function App() {
                             <a href="#naranja">Cover Letter</a>
                         </li>
                     </ul>
+                    <ThemeSwitcher className="narrow-screen"/>
                 </nav>
 
                 <svg id="menu_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">  {/*SVG MENU*/}
@@ -136,18 +139,32 @@ function App() {
 
                 <footer>
                     <a href="mailto:jorgevarelazamora@gmail.com">
-                        <img src="/mail-svgrepo-com.svg" alt="Mail logo" id="mailImg" />
+                        <SvgInline
+                            src="/icons/google/mail_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                            activeSrc="/mail-open-svgrepo-com.svg"
+                            title="Mail logo"
+                            id="mailImg"
+                        />
                     </a>
 
                     <a href="//www.linkedin.com/in/jorge-varela-zamora/">
-                        <img src="/linkedin.svg" alt="Linkedin logo" />
+                        <SvgInline
+                            src="/linkedin.svg"
+                            title="Linkedin logo"
+                        />
                     </a>
                     <a href="https://github.com/codejovz">
-                        <img src="/github.svg" alt="Github logo" />
+                        <SvgInline
+                            src="/github.svg"
+                            title="Github logo"
+                        />
                     </a>
 
                     <a href="https://codepen.io/codejovz">
-                        <img src="/codepen.svg" alt="Codepen logo" />
+                        <SvgInline
+                            src="/codepen.svg"
+                            title="Codepen logo"
+                        />
                     </a>
 
                 </footer>

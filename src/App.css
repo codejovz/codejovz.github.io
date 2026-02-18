@@ -1,3 +1,31 @@
+
+:root {
+  --bg-main: rgb(235, 235, 235);
+  --bg-surface: #ffffff;
+  --text-main: #1F1F1F;
+  --text-muted: rgb(55, 55, 55);
+  --gh-bg-main: ;
+  --gh-bg-surface: ;
+  --gh-bg-muted: #ddf4ff;
+  --gh-text-main: #0969da;
+  --gh-text-muted: ;
+  /*--border-color: #dee2e6;*/
+}
+
+[data-bs-theme="dark"], .theme-dark {
+  --bg-main: rgb(19, 19, 20);
+  --bg-surface: #1B1B1B;
+  --text-main: #C4C7C5;
+  --text-muted: rgb(140, 140, 140);
+  --gh-bg-main: ;
+  --gh-bg-surface: ;
+  --gh-bg-muted: #388bfd1a;
+  --gh-text-main: #4493f8;
+  --gh-text-muted: ;
+  /*--border-color: #dee2e6;*/
+}
+
+
 /* CSS RESET June 2024 ,@MiduDev*/
 * {
   margin: 0;
@@ -12,6 +40,8 @@
 
 body {
   min-height: 100dvh;
+  background-color: var(--bg-main);
+  color: var(--text-main)
 }
 
 input,
@@ -41,6 +71,21 @@ video,
 svg {
   height: auto;
   max-width: 100%;
+  color: var(--text-main);
+  fill: var(--text-main);
+  stroke: var(--text-main);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -77,6 +122,13 @@ svg {
   top: 1px;
   display: inline-block;
   margin-right: 4px;
+}
+
+#menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap:8px;
 }
 
 @media (min-width: 600px) {
@@ -124,7 +176,7 @@ svg {
   }
 
   #menu {
-    display: block;
+    display: inline-flex;
     right: 0;
     position: static;
     width: fit-content;
@@ -133,6 +185,8 @@ svg {
     margin-top: 34px;
     margin-right: 12px;
     background-color: none;
+    align-items: center;
+    justify-content: center;
   }
 
   #menu a {
@@ -141,10 +195,9 @@ svg {
   }
 
   li {
-    display: inline;
-    background-color: rgb(235, 235, 235);
-    border-color: rgb(120, 120, 120);
-    border: 2px solid;
+    display: inline-flex;
+    background-color: var(--bg-surface);
+    border: 2px solid var(--bg-main);
     padding-inline: 8px;
     padding-top: 3px;
     padding-bottom: 2px;
@@ -161,13 +214,6 @@ svg {
     font-weight: 700;
   }
 
-  #menu ul li:last-child {
-    border: 2px solid rgb(235, 235, 235);
-    background-color: rgb(120, 120, 120);
-    color: rgb(239, 237, 237);
-    font-weight: 900;
-  }
-
   #naranja {
     position: relative;
     top: 100px;
@@ -181,7 +227,7 @@ svg {
 
 }
 
-@media(max-width:600px) {
+@media (max-width: 599px) {
 
   header {
     margin-top: 34px;
@@ -197,7 +243,11 @@ svg {
     height: 100vh;
     right: 0vw;
     transition: heigth, 0.3s;
-    background-color: rgb(235, 235, 235);
+    background-color: var(--bg-main);
+    /* when JS sets display to inline-flex, stack children vertically */
+    flex-direction: column;
+    /* center children horizontally */
+    align-items: center;
   }
 
   .menu_icon {
@@ -206,74 +256,99 @@ svg {
     height: 20px;
   }
 
+  #menu > ul {
+    width: auto;
+    align-self: center;
+    margin-inline: auto;
+  }
+
   ul {
-    margin-left: 45vw;
     margin-top: 40px;
+    margin-inline: auto;
+  }
+
+  /* On mobile, remove the negative left margin used for neumorphism so
+     list items center correctly under the ul */
+  #menu ul li {
+    margin-left: 0 !important;
+    margin-inline: auto !important;
   }
 
   #menu ul li:first-child {
     margin-top: 120px;
   }
 
+  #menu ul {display: block;}
+
   #rojo h1 {
     font-size: 10vw;
   }
 
-  li {
-    /*Neumorphism CSS from: https://codepen.io/yuhomyan/pen/abdRKrM*/
-    height: 50px;
-    max-width: 180px;
-    min-width: 180px;
-    padding: 2px;
-    margin-block: 10px;
-    margin-left: -70px;
-    border-radius: 3px;
-    background: #e0e5ec;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-tap-highlight-color: transparent;
-    box-shadow:
-      -7px -7px 20px 0px #fff9,
-      -4px -4px 5px 0px #fff9,
-      7px 7px 20px 0px #0002,
-      4px 4px 5px 0px #0001,
-      inset 0px 0px 0px 0px #fff9,
-      inset 0px 0px 0px 0px #0001,
-      inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
-    transition: box-shadow 0.6s cubic-bezier(.79, .21, .06, .81);
-    font-size: 16px;
-    color: rgba(42, 52, 84, 1);
-    text-decoration: none;
-  }
+  /*Neumorphism CSS from: https://codepen.io/yuhomyan/pen/abdRKrM*/
+  /* 1. Setup the Variables for Light (Default) */
+:root {
+  --bg-main: rgb(235, 235, 235);
+  --bg-surface: #ffffff;
+  /* Light mode shadows */
+  --nm-shadow-dark: rgba(0, 0, 0, 0.1);   /* Bottom-right */
+  --nm-shadow-light: rgba(255, 255, 255, 0); /* Invisible on pure white */
+  --nm-border: 1px solid rgba(0, 0, 0, 0.05);
+  --text-color: rgba(42, 52, 84, 1);
+}
 
-  li:active {
-    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
-      -4px -4px 6px 0 rgba(116, 125, 136, .2),
-      inset -4px -4px 6px 0 rgba(255, 255, 255, .5),
-      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
-  }
+/* 2. Update Variables for Dark Mode */
+.theme-dark {
+  --bg-main: rgb(19, 19, 20);
+  --bg-surface: #1B1B1B;
+  /* Dark mode shadows: Need higher contrast */
+  --nm-shadow-dark: #0d0d0d;   /* Bottom-right */
+  --nm-shadow-light: #292929;  /* Top-left highlight */
+  --nm-border: 1px solid transparent;
+  --text-color: #e0e5ec;
+}
+
+/* 3. The Neumorphic Element */
+li {
+  height: 50px;
+  max-width: 180px;
+  min-width: 180px;
+  padding: 2px;
+  margin-block: 10px;
+  margin-left: -70px;
+  border-radius: 8px; /* Slightly smoother for Neumorphism */
+  
+  /* Link to variables */
+  background: var(--bg-surface);
+  border: var(--nm-border);
+  color: var(--text-color);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 16px;
+  
+  /* Dynamic Shadows */
+  box-shadow:
+    6px 6px 15px var(--nm-shadow-dark), 
+    -6px -6px 15px var(--nm-shadow-light);
+    
+  transition: all 0.4s cubic-bezier(.79, .21, .06, .81);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 4. The Pressed State */
+li:active {
+  transform: scale(0.97); /* Physical feedback */
+  box-shadow: 
+    inset 4px 4px 8px var(--nm-shadow-dark), 
+    inset -4px -4px 8px var(--nm-shadow-light);
+}
 
   li a {
-    color: black;
+    color: var(--text-main);
   }
 
-  #mailLink::before {
-    content: '';
-    background-image: url(/mail-svgrepo-com.svg);
-    background-size: contain;
-    width: 16px;
-    height: 16px;
-    position: relative;
-    top: 1px;
-    display: inline-block;
-    margin-right: 8px;
-  }
-
-  #mailLink:hover::before {
-    background-image: url(/mail-open-svgrepo-com.svg);
-  }
 
   #naranja {
     position: relative;
@@ -391,7 +466,6 @@ body {
 
 line {
   transition: all 0.3s;
-  stroke: rgba(74, 51, 49, 0.8);
 }
 
 #menu_icon {
@@ -413,6 +487,10 @@ line {
   list-style-type: none;
 }
 
+.theme-switcher:global(.narrow-screen) {
+    display: inline-flex !important;
+    position: absolute; bottom: 20px; right: 16px;
+}
 
 #fullScreenButton {
   width: 40px;
@@ -432,7 +510,7 @@ line {
 .box {
   border-radius: 20px;
   border: 0px solid black;
-  background-color: rgb(235, 235, 235);
+  background-color: var(--bg-surface);
 }
 
 
@@ -454,7 +532,7 @@ line {
 #amarillo {
   position: relative;
   border: 1px solid rgba(255, 255, 0, 0);
-  background-color: #101414;
+  background-color: var(--bg-surface);
   height: 240px;
   overflow-y: hidden;
   overflow-x: scroll;
@@ -479,7 +557,7 @@ line {
 
 #CL_content {
   opacity: 0;
-  color: black;
+  color: var(--text-main);
   animation: none;
   position: relative;
   margin-top: 20px;
@@ -499,7 +577,7 @@ line {
   margin-bottom: 14px;
   margin-left: 22px;
   margin-right: 22px;
-  color: rgb(14, 14, 14);
+  color: var(--text-main);
 }
 
 #CL_content p a {
@@ -534,14 +612,6 @@ line {
     backdrop-filter: blur(5px);*/
 }
 
-#mailImg {
-  content: url('/mail-svgrepo-com.svg');
-}
-
-#mailImg:hover {
-  content: url('/mail-open-svgrepo-com.svg');
-}
-
 .card:hover .footer {
   top: 0%;
 }
@@ -553,7 +623,7 @@ p {
 
 
 footer {
-  background-color: rgb(235, 235, 235);
+  background-color: var(--bg-surface);
   /*background-color: rgb(235, 235, 235);*/
   width: 100%;
   position: relative;
@@ -565,39 +635,56 @@ footer {
   margin-right: 0px;
 }
 
+footer svg {
+  fill: var(--text-main);
+}
 
-footer img {
-  /*Neumorphism CSS from: https://codepen.io/yuhomyan/pen/abdRKrM*/
+ /*Neumorphism CSS from: https://codepen.io/yuhomyan/pen/abdRKrM*/
+
+/* 1. Define the colors at the root level */
+:root {
+  --nm-bg: #ffffff;
+  --nm-shadow-dark: rgba(0, 0, 0, 0.08);
+  --nm-shadow-light: rgba(255, 255, 255, 0.5);
+  --nm-border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* 2. Update colors when .theme-dark is active */
+.theme-dark {
+  --nm-bg: #1B1B1B;
+  --nm-shadow-dark: #0d0d0d;
+  --nm-shadow-light: #292929;
+  --nm-border: 0px solid transparent; /* No border needed in dark mode */
+}
+
+/* 3. Single CSS block that works for BOTH modes */
+footer svg {
   height: 50px;
   margin: 10px;
   padding: 2px;
-  border-radius: 3px;
-  background: #e0e5ec;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-tap-highlight-color: transparent;
+  
+  /* These variables update automatically when you toggle the class */
+  background: var(--nm-bg);
+  border: var(--nm-border);
   box-shadow:
-    -7px -7px 20px 0px #fff9,
-    -4px -4px 5px 0px #fff9,
-    7px 7px 20px 0px #0002,
-    4px 4px 5px 0px #0001,
-    inset 0px 0px 0px 0px #fff9,
-    inset 0px 0px 0px 0px #0001,
-    inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
-  transition: box-shadow 0.6s cubic-bezier(.79, .21, .06, .81);
-  font-size: 16px;
-  color: rgba(42, 52, 84, 1);
-  text-decoration: none;
+    6px 6px 12px var(--nm-shadow-dark), 
+    -6px -6px 12px var(--nm-shadow-light);
+    
+  transition: all 0.4s cubic-bezier(.79, .21, .06, .81);
+  -webkit-tap-highlight-color: transparent;
 }
 
-footer img:active {
-  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
-    -4px -4px 6px 0 rgba(116, 125, 136, .2),
-    inset -4px -4px 6px 0 rgba(255, 255, 255, .5),
-    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+/* 4. The Pressed State (also using variables) */
+footer svg:active {
+  box-shadow: 
+    inset 4px 4px 8px var(--nm-shadow-dark), 
+    inset -4px -4px 8px var(--nm-shadow-light);
+  transform: scale(0.96);
 }
 
 @keyframes muestraParrafo {
@@ -712,10 +799,10 @@ footer img:active {
 }
 
 .repTags a {
-  border: 1px solid black;
   border-radius: 12px;
-  color: #4493f8;
-  background-color: #388bfd1a;
+  border-color: var(--gh-border-color);
+  color: var(--gh-text-main);
+  background-color: var(--gh-bg-muted);
   margin: 4px 1.5px 4px 0px;
   padding: 0px 10px;
   font-size: 12px;
@@ -723,7 +810,7 @@ footer img:active {
 }
 
 .repTitle {
-  color: #4493f8;
+  color: var(--gh-text-main);
   font-size: 20px;
   font-weight: 700;
 }
@@ -802,4 +889,8 @@ footer img:active {
 
 .badge {
   margin-inline: 2px;
+}
+
+#mailImg {
+  width: 50px;
 }

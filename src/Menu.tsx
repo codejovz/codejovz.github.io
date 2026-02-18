@@ -8,6 +8,7 @@ export default function Menu() {
     const menu = document.getElementById('menu') as HTMLElement | null;
     let menuTitle: SVGTitleElement | null = null;
     const body = document.body;
+    console.log('script creado');
 
     if (menuIcon) {
       // For SVG, use <title> element for tooltip
@@ -42,7 +43,7 @@ export default function Menu() {
         line1.style.transform = ' translateX(36px) translateY(-8px) rotate(45deg)';
         line2.style.opacity = '0';
         line3.style.transform = ' translateX(-36px) translateY(34px) rotate(-45deg)';
-        menu.style.display = 'block';
+        menu.style.display = 'inline-flex';
         menu.style.transform = 'translateX(0)';
         body.style.overflow = 'hidden';
         if (menuTitle) menuTitle.textContent = "Close Menu";

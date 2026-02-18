@@ -1,0 +1,60 @@
+/* ThemeSwitcher component (CSS Modules) */
+.theme-switcher {
+    width: max-content;
+    align-self: center;
+    /* hidden by default; variants are explicitly shown in media queries */
+    display: none;
+    gap: 8px;
+    height: max-content;
+    align-items: center;
+}
+
+.theme-switcher input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-switcher label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    height: 100%;
+    line-height: 1;
+}
+
+.theme-switcher img,
+.theme-switcher svg {
+    display: block;
+    align-self: center;
+}
+
+/* Desktop: show the wide-screen variant, hide narrow-screen */
+@media (min-width: 600px) {
+    .theme-switcher:global(.wide-screen) {
+        display: inline-flex !important;
+        align-items: center;
+    }
+    .theme-switcher:global(.narrow-screen) {
+        display: none !important;
+    }
+}
+
+/* Mobile: show the narrow-screen variant and place it in normal flow
+   so it appears below the #menu > ul block. Hide the wide-screen one. */
+@media (max-width: 599px) {
+    .theme-switcher:global(.wide-screen) {
+        display: none !important;
+    }
+    .theme-switcher:global(.narrow-screen) {
+        display: flex !important;
+        position: static !important;
+        /*margin: 12px auto 0 !important;*/
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+}
