@@ -6,6 +6,7 @@ import Menu from '../Menu.tsx';
 import ThemeSwitcher from '../features/theme-switcher/ThemeSwitcher.tsx';
 import ShowcaseContainer from '../features/showcase/ShowcaseContainer.tsx';
 import ResumeeContainer from '../features/resumee/ResumeeContainer.tsx';
+import Chatbot from '../features/chatbot/Chatbot';
 
 export default function Page() {
     return (
@@ -168,8 +169,8 @@ export default function Page() {
                     </a>
 
                 </footer>
-
             </div>
+            <Chatbot />
         </>
     )
 }
