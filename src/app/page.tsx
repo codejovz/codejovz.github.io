@@ -2,11 +2,11 @@
 
 import { Analytics } from '@vercel/analytics/react';
 import { SvgInline } from 'react-svg-inliner';
-import Menu from '../Menu.tsx';
-import ThemeSwitcher from '../features/theme-switcher/ThemeSwitcher.tsx';
-import ShowcaseContainer from '../features/showcase/ShowcaseContainer.tsx';
-import ResumeeContainer from '../features/resumee/ResumeeContainer.tsx';
-import Chatbot from '../features/chatbot/Chatbot';
+import Menu from '../Menu';
+import ThemeSwitcher from '../features/theme-switcher/ThemeSwitcher';
+import ShowcaseContainer from '../features/showcase/ShowcaseContainer';
+import ResumeeContainer from '../features/resumee/ResumeeContainer';
+import Chatbot from '../features/chatbot/components/chatbot/Chatbot';
 
 export default function Page() {
     return (
@@ -80,11 +80,11 @@ export default function Page() {
                 <article id="naranja" className="box">
 
                     <button id="fullScreenButton">
-                        <svg width="100%" height="100%" viewBox="0 0 200 200" fill="none" stroke="black" >
-                            <polyline points="10,70 10,10 70,10" id="arIzq" />
-                            <polyline points="10,130 10,190 70,190" id="abIzq" />
-                            <polyline points="130,10 190,10 190,70" id="arDer" />
-                            <polyline points="130,190 190,190 190,130" id="abDer" />
+                        <svg width="100%" height="100%" viewBox="0 0 200 200">
+                            <polyline points="10,70 10,10 70,10" id="arIzq" strokeWidth="8" />
+                            <polyline points="10,130 10,190 70,190" id="abIzq" strokeWidth="8" />
+                            <polyline points="130,10 190,10 190,70" id="arDer" strokeWidth="8" />
+                            <polyline points="130,190 190,190 190,130" id="abDer" strokeWidth="8" />
                         </svg>
                     </button>
 
@@ -108,7 +108,7 @@ export default function Page() {
 
 
                 <nav id="menu">
-                    <ThemeSwitcher className="wide-screen"/>
+                    <ThemeSwitcher className="wide-screen" />
                     <ul id="nav-list">
                         <li id="menuAbout">
                             <SvgInline
@@ -129,7 +129,7 @@ export default function Page() {
                             <a href="#naranja">Cover Letter</a>
                         </li>
                     </ul>
-                    <ThemeSwitcher className="narrow-screen"/>
+                    <ThemeSwitcher className="narrow-screen" />
                 </nav>
 
                 <svg id="menu_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">

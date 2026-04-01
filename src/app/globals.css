@@ -461,7 +461,7 @@ button:hover {
 
 polyline {
   fill: none;
-  stroke: black;
+  stroke: var(--text-main);
   stroke-linecap: round;
   stroke-width: 12;
 }
@@ -646,6 +646,10 @@ footer {
 }
 
 footer svg {
+  fill: var(--text-main);
+}
+
+svg{
   fill: var(--text-main);
 }
 
