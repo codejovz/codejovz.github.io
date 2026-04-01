@@ -1,13 +1,14 @@
+"use client";
+
 import { Analytics } from '@vercel/analytics/react';
 import { SvgInline } from 'react-svg-inliner';
-import Menu from './Menu.tsx';
-import './App.css';
-import ThemeSwitcher from './features/theme-switcher/ThemeSwitcher.tsx';
-import ShowcaseContainer from './features/showcase/ShowcaseContainer.tsx';
-import ResumeeContainer from './features/resumee/ResumeeContainer.tsx';
+import Menu from '../Menu';
+import ThemeSwitcher from '../features/theme-switcher/ThemeSwitcher';
+import ShowcaseContainer from '../features/showcase/ShowcaseContainer';
+import ResumeeContainer from '../features/resumee/ResumeeContainer';
+import Chatbot from '../features/chatbot/components/chatbot/Chatbot';
 
-function App() {
-
+export default function Page() {
     return (
         <>
             <Analytics />
@@ -16,7 +17,7 @@ function App() {
 
             <div className="container">
 
-                <article id="rojo" className="box"> {/*I've named these after color names to make editing more intuitive*/}
+                <article id="rojo" className="box">
                     <h1>Jorge Varela Zamora</h1>
                     <h2>Software developer</h2>
                 </article>
@@ -41,28 +42,28 @@ function App() {
                             <p className="repFork">Forked from <a href="https://github.com/DAMVA202425/DevHeat" className="forkedLink">DAMVA202425/DevHeat</a></p>
                             <p className="repDesc">Automates GitHub profile edition and creation of READMEs.</p>
                             <p className="repTags"><a href="https://github.com/topics/readme">readme</a> <a href="https://github.com/topics/app">app</a> <a href="https://github.com/topics/automation">automation</a></p>
-                            <p><span className="kotlin">Kotlin</span><img className="liscence" src="./octicon_law.svg" /> The Unlicense <span className="updateDate">Updated on Jun 19, 2025</span></p>
+                            <p><span className="kotlin">Kotlin</span><img className="liscence" src="/octicon_law.svg" /> The Unlicense <span className="updateDate">Updated on Jun 19, 2025</span></p>
                         </section>
 
                         <section className="scroll-item">
                             <p><a className="repTitle" href="https://github.com/404">TFG</a> <span className="repVisib">Private</span></p>
                             <p className="repDesc">Kotlin app for users, Python-driven local AI, a MySQL database, and a Java API for local connections.</p>
                             <p className="repTags"><a href="https://github.com/topics/artificial-intelligence">artificial-intelligence</a> <a href="https://github.com/topics/bcrypt">bcrypt</a> <a href="https://github.com/topics/ktor-server">ktor-server</a></p>
-                            <p><span className="kotlin">Kotlin</span> <img className="liscence" src="./octicon_law.svg" />MIT License <span className="updateDate">Updated on Jun 10, 2025</span></p>
+                            <p><span className="kotlin">Kotlin</span> <img className="liscence" src="/octicon_law.svg" />MIT License <span className="updateDate">Updated on Jun 10, 2025</span></p>
                         </section>
 
                         <section className="scroll-item">
                             <p><a className="repTitle" href="https://github.com/codejovz/autoUpdatingBio">autoUpdatingBio</a> <span className="repVisib">Public</span></p>
                             <p className="repDesc">Script / bot for auto-updating the biography of your Github's account.</p>
                             <p className="repTags"><a href="https://github.com/topics/python">python</a> <a href="https://github.com/topics/github-api">github-api</a> <a href="https://github.com/topics/workflow">workflow</a> <a href="https://github.com/topics/yml">yml</a></p>
-                            <p><img className="liscence" src="./octicon_law.svg" />The Unlicense <span className="updateDate">Updated on Aug 17, 2024</span></p>
+                            <p><img className="liscence" src="/octicon_law.svg" />The Unlicense <span className="updateDate">Updated on Aug 17, 2024</span></p>
                         </section>
 
                         <section className="scroll-item">
                             <p><a className="repTitle" href="https://github.com/codejovz/overlappingJFrameComponents">overlappingJFrameComponents</a> <span className="repVisib">Public</span></p>
                             <p className="repDesc">How to overlapp a JFrame component over Graphics ( Java ).</p>
                             <p className="repTags"><a href="https://github.com/topics/swing-gui">swing-gui</a> <a href="https://github.com/topics/jframes">jframes</a></p>
-                            <p className="repLast"><span className="java">Java</span> <img className="liscence" src="./octicon_law.svg" />The Unlicense <span className="updateDate">Updated on Nov 28, 2024</span></p>
+                            <p className="repLast"><span className="java">Java</span> <img className="liscence" src="/octicon_law.svg" />The Unlicense <span className="updateDate">Updated on Nov 28, 2024</span></p>
                         </section>
 
                         <section className="scroll-item">
@@ -79,11 +80,11 @@ function App() {
                 <article id="naranja" className="box">
 
                     <button id="fullScreenButton">
-                        <svg width="100%" height="100%" viewBox="0 0 200 200" fill="none" stroke="black" >
-                            <polyline points="10,70 10,10 70,10" id="arIzq" />
-                            <polyline points="10,130 10,190 70,190" id="abIzq" />
-                            <polyline points="130,10 190,10 190,70" id="arDer" />
-                            <polyline points="130,190 190,190 190,130" id="abDer" />
+                        <svg width="100%" height="100%" viewBox="0 0 200 200">
+                            <polyline points="10,70 10,10 70,10" id="arIzq" strokeWidth="8" />
+                            <polyline points="10,130 10,190 70,190" id="abIzq" strokeWidth="8" />
+                            <polyline points="130,10 190,10 190,70" id="arDer" strokeWidth="8" />
+                            <polyline points="130,190 190,190 190,130" id="abDer" strokeWidth="8" />
                         </svg>
                     </button>
 
@@ -107,7 +108,7 @@ function App() {
 
 
                 <nav id="menu">
-                    <ThemeSwitcher className="wide-screen"/>
+                    <ThemeSwitcher className="wide-screen" />
                     <ul id="nav-list">
                         <li id="menuAbout">
                             <SvgInline
@@ -128,10 +129,10 @@ function App() {
                             <a href="#naranja">Cover Letter</a>
                         </li>
                     </ul>
-                    <ThemeSwitcher className="narrow-screen"/>
+                    <ThemeSwitcher className="narrow-screen" />
                 </nav>
 
-                <svg id="menu_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">  {/*SVG MENU*/}
+                <svg id="menu_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                     <line className="line" id="line1" x1="20" y1="30" x2="80" y2="30" strokeWidth="8" strokeLinecap="round" />
                     <line className="line" id="line2" x1="20" y1="50" x2="80" y2="50" strokeWidth="8" strokeLinecap="round" />
                     <line className="line" id="line3" x1="20" y1="70" x2="80" y2="70" strokeWidth="8" strokeLinecap="round" />
@@ -168,12 +169,8 @@ function App() {
                     </a>
 
                 </footer>
-
             </div>
-
-
+            <Chatbot />
         </>
     )
 }
-
-export default App

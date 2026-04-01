@@ -1,4 +1,3 @@
-
 :root {
   --bg-main: rgb(235, 235, 235);
   --bg-surface: #ffffff;
@@ -12,7 +11,8 @@
   /*--border-color: #dee2e6;*/
 }
 
-[data-bs-theme="dark"], .theme-dark {
+[data-bs-theme="dark"],
+.theme-dark {
   --bg-main: rgb(19, 19, 20);
   --bg-surface: #1B1B1B;
   --text-main: #C4C7C5;
@@ -128,7 +128,7 @@ svg {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap:8px;
+  gap: 8px;
 }
 
 @media (min-width: 600px) {
@@ -256,7 +256,7 @@ svg {
     height: 20px;
   }
 
-  #menu > ul {
+  #menu>ul {
     width: auto;
     align-self: center;
     margin-inline: auto;
@@ -278,7 +278,9 @@ svg {
     margin-top: 120px;
   }
 
-  #menu ul {display: block;}
+  #menu ul {
+    display: block;
+  }
 
   #rojo h1 {
     font-size: 10vw;
@@ -286,64 +288,70 @@ svg {
 
   /*Neumorphism CSS from: https://codepen.io/yuhomyan/pen/abdRKrM*/
   /* 1. Setup the Variables for Light (Default) */
-:root {
-  --bg-main: rgb(235, 235, 235);
-  --bg-surface: #ffffff;
-  /* Light mode shadows */
-  --nm-shadow-dark: rgba(0, 0, 0, 0.1);   /* Bottom-right */
-  --nm-shadow-light: rgba(255, 255, 255, 0); /* Invisible on pure white */
-  --nm-border: 1px solid rgba(0, 0, 0, 0.05);
-  --text-color: rgba(42, 52, 84, 1);
-}
+  :root {
+    --bg-main: rgb(235, 235, 235);
+    --bg-surface: #ffffff;
+    /* Light mode shadows */
+    --nm-shadow-dark: rgba(0, 0, 0, 0.1);
+    /* Bottom-right */
+    --nm-shadow-light: rgba(255, 255, 255, 0);
+    /* Invisible on pure white */
+    --nm-border: 1px solid rgba(0, 0, 0, 0.05);
+    --text-color: rgba(42, 52, 84, 1);
+  }
 
-/* 2. Update Variables for Dark Mode */
-.theme-dark {
-  --bg-main: rgb(19, 19, 20);
-  --bg-surface: #1B1B1B;
-  /* Dark mode shadows: Need higher contrast */
-  --nm-shadow-dark: #0d0d0d;   /* Bottom-right */
-  --nm-shadow-light: #292929;  /* Top-left highlight */
-  --nm-border: 1px solid transparent;
-  --text-color: #e0e5ec;
-}
+  /* 2. Update Variables for Dark Mode */
+  .theme-dark {
+    --bg-main: rgb(19, 19, 20);
+    --bg-surface: #1B1B1B;
+    /* Dark mode shadows: Need higher contrast */
+    --nm-shadow-dark: #0d0d0d;
+    /* Bottom-right */
+    --nm-shadow-light: #292929;
+    /* Top-left highlight */
+    --nm-border: 1px solid transparent;
+    --text-color: #e0e5ec;
+  }
 
-/* 3. The Neumorphic Element */
-li {
-  height: 50px;
-  max-width: 180px;
-  min-width: 180px;
-  padding: 2px;
-  margin-block: 10px;
-  margin-left: -70px;
-  border-radius: 8px; /* Slightly smoother for Neumorphism */
-  
-  /* Link to variables */
-  background: var(--bg-surface);
-  border: var(--nm-border);
-  color: var(--text-color);
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 16px;
-  
-  /* Dynamic Shadows */
-  box-shadow:
-    6px 6px 15px var(--nm-shadow-dark), 
-    -6px -6px 15px var(--nm-shadow-light);
-    
-  transition: all 0.4s cubic-bezier(.79, .21, .06, .81);
-  -webkit-tap-highlight-color: transparent;
-}
+  /* 3. The Neumorphic Element */
+  li {
+    height: 50px;
+    max-width: 180px;
+    min-width: 180px;
+    padding: 2px;
+    margin-block: 10px;
+    margin-left: -70px;
+    border-radius: 8px;
+    /* Slightly smoother for Neumorphism */
 
-/* 4. The Pressed State */
-li:active {
-  transform: scale(0.97); /* Physical feedback */
-  box-shadow: 
-    inset 4px 4px 8px var(--nm-shadow-dark), 
-    inset -4px -4px 8px var(--nm-shadow-light);
-}
+    /* Link to variables */
+    background: var(--bg-surface);
+    border: var(--nm-border);
+    color: var(--text-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+
+    /* Dynamic Shadows */
+    box-shadow:
+      6px 6px 15px var(--nm-shadow-dark),
+      -6px -6px 15px var(--nm-shadow-light);
+
+    transition: all 0.4s cubic-bezier(.79, .21, .06, .81);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* 4. The Pressed State */
+  li:active {
+    transform: scale(0.97);
+    /* Physical feedback */
+    box-shadow:
+      inset 4px 4px 8px var(--nm-shadow-dark),
+      inset -4px -4px 8px var(--nm-shadow-light);
+  }
 
   li a {
     color: var(--text-main);
@@ -453,7 +461,7 @@ button:hover {
 
 polyline {
   fill: none;
-  stroke: black;
+  stroke: var(--text-main);
   stroke-linecap: round;
   stroke-width: 12;
 }
@@ -487,9 +495,11 @@ line {
   list-style-type: none;
 }
 
-.theme-switcher:global(.narrow-screen) {
-    display: inline-flex !important;
-    position: absolute; bottom: 20px; right: 16px;
+.theme-switcher.narrow-screen {
+  display: inline-flex !important;
+  position: absolute;
+  bottom: 20px;
+  right: 16px;
 }
 
 #fullScreenButton {
@@ -639,7 +649,11 @@ footer svg {
   fill: var(--text-main);
 }
 
- /*Neumorphism CSS from: https://codepen.io/yuhomyan/pen/abdRKrM*/
+svg{
+  fill: var(--text-main);
+}
+
+/*Neumorphism CSS from: https://codepen.io/yuhomyan/pen/abdRKrM*/
 
 /* 1. Define the colors at the root level */
 :root {
@@ -654,7 +668,8 @@ footer svg {
   --nm-bg: #1B1B1B;
   --nm-shadow-dark: #0d0d0d;
   --nm-shadow-light: #292929;
-  --nm-border: 0px solid transparent; /* No border needed in dark mode */
+  --nm-border: 0px solid transparent;
+  /* No border needed in dark mode */
 }
 
 /* 3. Single CSS block that works for BOTH modes */
@@ -667,22 +682,22 @@ footer svg {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
   /* These variables update automatically when you toggle the class */
   background: var(--nm-bg);
   border: var(--nm-border);
   box-shadow:
-    6px 6px 12px var(--nm-shadow-dark), 
+    6px 6px 12px var(--nm-shadow-dark),
     -6px -6px 12px var(--nm-shadow-light);
-    
+
   transition: all 0.4s cubic-bezier(.79, .21, .06, .81);
   -webkit-tap-highlight-color: transparent;
 }
 
 /* 4. The Pressed State (also using variables) */
 footer svg:active {
-  box-shadow: 
-    inset 4px 4px 8px var(--nm-shadow-dark), 
+  box-shadow:
+    inset 4px 4px 8px var(--nm-shadow-dark),
     inset -4px -4px 8px var(--nm-shadow-light);
   transform: scale(0.96);
 }
